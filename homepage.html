@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <title>GREENSTORE</title>
+    <style>
+        body {
+            font-family: 'Architects Daughter', cursive;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover{
+            color: #91C11E;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #FFAD00;
+        }
+        
+        p {
+            color: #FFAD00;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        
+        .dropdown-menu {
+            background-color: #FFAD00;
+        }
+        
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .jumbotron{
+            background-image: url('https://i.pinimg.com/originals/14/27/39/14273998ae223d4478bd0ad66d88453d.png');
+            padding-left: 10px;
+            padding-right: 10px;
+            background-size: cover; 
+            height: 40rem;
+            margin: 0px;
+        }
+
+        .jumbotron p{
+            color: rgb(95, 5, 23);
+        }
+        
+        .carousel-inner img {
+            width: 1100px;
+            height: 800px;
+        }
+
+        .carousel{
+            padding: 10px;
+            background-color: rgb(243, 239, 187);
+        }
+        
+        .container-1 {
+            background-image: linear-gradient(white, hsla(56, 100%, 50%, 0.5));
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 600px;
+        }
+        
+        .col-2 img {
+            max-width: 100%;
+            padding: 100px 0;
+        }
+        
+        .col-1 h1 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #659A41;
+            color: white;
+            padding: 8x 30px;
+            margin: 40px 20px;
+            border-radius: 100px;
+            transition: background 0.5s;
+        }
+        
+        .btn:hover {
+            background: #FFAD00;
+        }
+
+        #cardHeader{
+            font-weight: bold; 
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            margin: 0px;
+            padding-left: 1rem;
+            background-color: rgb(189, 228, 152);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .pagination{
+            background-color:  rgb(231, 240, 191);
+            margin: 0px;
+            padding-top: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .card img{
+            height: 400px;
+            padding: 10px;
+        }
+
+        .card-img-top{
+            background-color: rgb(231, 240, 191);
+        }
+
+        .card-text{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(32, 63, 3);
+        }
+
+        .card-body{
+            background-color: rgb(231, 240, 191);
+        }
+
+        .card-title{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .footer {
+            background: #659A41;
+            color: #000;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+        
+        .footer p {
+            color: #fff;
+        }
+        
+        .footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3 {
+            min-width: 426px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-2 {
+            text-align: center;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .copyright {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="alert alert-warning alert-dismissible fade show" style="margin-bottom: 0px;" role="alert">
+            <strong>Holy guacamole!</strong> Enjoy shopping in Green Store.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <div class=" container-fluid-1">
+            <nav class="navbar navbar-expand-lg navbar-white" style="background-color: rgb(238, 237, 192);">
+                <a class="navbar-brand ">
+                    <h1 style="color:#659A41; ">GREEN
+                        <p2 style="color:#91C11E ">STORE</p2>
+                    </h1>
+                </a>
+                <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
+                      <span class="navbar-toggler-icon "></span>
+                    </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item active ">
+                            <a class="nav-link " href="# ">Home<span class="sr-only ">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">About</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Product</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item " href="# ">Login/Register</a>
+                                <a class="dropdown-item " href="# ">Profile</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="jumbotron text-center">
+        <br>
+        <h1>Welcome To Green Store</h1>
+        <p>--Grab some fresh groceries and enjoy!--</p> 
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://raw.githubusercontent.com/Web-Programming-G3/Grocery-Website/main/1.jpg" class="d-block w-100" alt="Grocery">
+              </div>
+              <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/Web-Programming-G3/Grocery-Website/main/2.jpg" class="d-block w-100" alt="Grocery">
+              </div>
+              <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/Web-Programming-G3/Grocery-Website/main/3.jpg" class="d-block w-100" alt="Grocery">
+              </div>
+              <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/Web-Programming-G3/Grocery-Website/main/4.jpg" class="d-block w-100" alt="Grocery">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="col-1">
+            <h1>AMAZING DEALS AWAIT YOU!!</h1>
+            <a data-toggle="tooltip" data-placement="top" title="Click to see more products" href="" class="btn">Check Out</a>
+        </div>
+        <div class="col-2">
+            <img src="https://raw.githubusercontent.com/Web-Programming-G3/Grocery-Website/main/grocery.png" alt="Grocery">
+        </div>
+    </div>
+    
+    <h2 id="cardHeader">Ramadhan Special Deals  (From 15th April - 15th May)</h2>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <div class="card-group">
+        <div class="card">
+          <img src="dates.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dates</h5>
+            <p class="card-text">RM 20.00/kg</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="ghee.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ghee</h5>
+            <p class="card-text">RM 35.00/kg</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="honey.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Honey</h5>
+            <p class="card-text">RM 28.00/kg</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h2>Our Helpline</h2>
+                    <p>1300-800-600</p>
+                </div>
+                <div class="footer-col-2">
+                    <h2>Follow Us</h2>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h2>Find Us At</h2>
+                    <p>Jalan 6/95B, Cheras Utama,<br>56100 Kuala Lumpur,<br>Malaysia </p>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2021 - GREENSTORE</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
