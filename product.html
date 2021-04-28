@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="product.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GREENSTORE-PRODUCT</title>
+    <style>
+        body {
+            font-family: 'Architects Daughter', cursive;
+            color: #659A41;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .nav-item:hover {
+            color: #91C11E;
+        }
+        
+        .nav-link:hover {
+            color: #91C11E;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #FFAD00;
+        }
+        
+        p {
+            color: #FFAD00;
+        }
+        
+        .container-fluid-2 .row {
+            width: min-content;
+        }
+        
+        .col-1 {
+            max-width: 100%;
+            padding: 15px;
+            background-color: #94c02e;
+        }
+        
+        .col-2 {
+            max-width: 1500px;
+            padding: 15px;
+        }
+        
+        .col-3 {
+            max-width: 600px;
+            padding: 15px;
+        }
+        
+        .card-body p {
+            color: #91C11E;
+            font-size: 20px;
+        }
+        
+        .mybox {
+            background-color: white;
+        }
+        
+        .carousel-inner img {
+            width: 1600px;
+            height: 600px;
+        }
+        
+        .dropdown-menu {
+            background-color: #FFAD00;
+        }
+        
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #659A41;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #FFAD00;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        .modal-title {
+            color: #659A41;
+        }
+        
+        .row button {
+            background-color: #FFAD00;
+            border-color: black;
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+        
+        .footer {
+            background: #659A41;
+            color: #000;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+        
+        .footer p {
+            color: #fff;
+        }
+        
+        .footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            width: 285px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-2 {
+            text-align: center;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .copyright {
+            text-align: center;
+        }
+        
+        main {
+            padding: 100px 0 50px;
+            background: #fff;
+            font-size: 15px;
+        }
+        
+        main p {
+            font-size: 16px;
+        }
+        
+        .page-title {
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        main .btn,
+        header .btn {
+            background: #659A41;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            color: #fff;
+            border-radius: 0;
+        }
+        
+        main .btn i,
+        header .btn i {
+            padding-right: 5px;
+        }
+        
+        main .btn:hover,
+        header .btn:hover,
+        main .btn:active,
+        header .btn:active,
+        main .btn:focus,
+        header .btn:focus {
+            background: #5f5f5f;
+            color: #fff;
+        }
+        
+        main .ct-product {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        main .ct-product:hover .inner {
+            background: #FFAD00;
+            color: white;
+        }
+        
+        main .ct-product:hover .inner *,
+        main .ct-product:hover .inner .ct-product-price {
+            color: #fff;
+        }
+        
+        main .ct-product .image img {
+            width: 100%;
+        }
+        
+        main .ct-product .inner {
+            -webkit-transition: background 0.25s ease;
+            transition: background 0.25s ease;
+            position: relative;
+            padding: 35px 15px 15px;
+        }
+        
+        main .ct-product .inner .btn {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            line-height: 46px;
+            text-align: center;
+            background: hsla(56, 100%, 50%, 0.3);
+            padding: 0;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            font-size: 35px;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: -27.5px auto 0;
+            -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+        }
+        
+        main .ct-product .inner .btn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        main .ct-product .inner .btn:hover:active {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        
+        main .ct-product .inner .btn i {
+            position: relative;
+            left: 4px;
+        }
+        
+        main .ct-product .inner .ct-product-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        main .ct-product .inner .ct-product-price {
+            margin-top: 10px;
+            color: #91C11E;
+            display: block;
+        }
+        
+        main .widget {
+            padding-bottom: 50px;
+            background: #fff;
+            padding: 0 15px 15px;
+        }
+        
+        main .ct-cart-empty {
+            padding-top: 20px;
+        }
+        
+        main .ct-cart {
+            position: relative;
+        }
+        
+        main .ct-cart:before,
+        main .ct-cart:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        
+        main .ct-cart .ct-cart-total:before {
+            content: 'Total: ';
+            padding-right: 10px;
+        }
+        
+        main .ct-cart ol {
+            list-style: none;
+            padding: 20px 0;
+        }
+        
+        main .ct-cart ol li {
+            position: relative;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        
+        main .ct-cart ol li:first-child {
+            border-top: 1px solid #eee;
+        }
+        
+        main .ct-cart ol li button {
+            position: absolute;
+            top: 50%;
+            margin-top: -12.5px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            color: #659A41;
+            border-radius: 50%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        .ct-cart ol li button:hover {
+            background: #FFAD00;
+            color: #fff;
+        }
+        
+        main .ct-cart ol li .ct-cart-name {
+            display: block;
+        }
+        
+        main .ct-cart ol li input,
+        main .ct-cart ol li .ct-cart-price {
+            color: #91C11E;
+            border: none;
+        }
+        
+        main .ct-cart ol li input {
+            width: 50px;
+        }
+        
+        main .ct-cart ol li .ct-cart-price:after {
+            content: 'x';
+            padding: 0 10px;
+        }
+        
+        main .ct-cart .ct-cart-checkout,
+        main .ct-cart .ct-cart-clear {
+            width: 45%;
+            padding: 10px 0;
+            border: none;
+            color: #fff;
+            -webkit-transition: background 0.2s ease;
+            transition: background 0.2s ease;
+        }
+        
+        main .ct-cart .ct-cart-checkout:hover,
+        main .ct-cart .ct-cart-clear:hover {
+            background: #5f5f5f;
+        }
+        
+        main .ct-cart .ct-cart-checkout {
+            float: right;
+            background: #FFAD00;
+        }
+        
+        main .ct-cart .ct-cart-clear {
+            float: left;
+            background: #659A41;
+        }
+        
+        main .ct-cart-empty {
+            padding-top: 0;
+            bottom: auto;
+            top: -30px;
+            left: 1px;
+            text-align: left;
+        }
+        
+        .icon {
+            text-decoration: none;
+            font-size: 40px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid-1">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <a class="navbar-brand">
+                    <h1 style="color:#659A41;">GREEN
+                        <p2 style="color:#91C11E">STORE</p2>
+                    </h1>
+                </a>
+                <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
+                      <span class="navbar-toggler-icon "></span>
+                    </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item active ">
+                            <a class="nav-link " href="mainpage3.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="admin.html">Product <span class="sr-only ">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="list.html">Shopping List</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item " href="LoginRegister.html">Login/Register</a>
+                            </div>
+                        </li>
+                        <button type="button" class="btn btn-primary" onclick=" window.location.href='admin.html' " style="background-color: #FFAD00;border-color: #FFAD00;margin-left: 680px; ">Admin</button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="mybox ">
+        <div class="container-fluid ">
+            <div id="demo " class="carousel slide " data-ride="carousel ">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators ">
+                    <li data-target="#demo " data-slide-to="0 " class="active "></li>
+                    <li data-target="#demo " data-slide-to="1 "></li>
+                    <li data-target="#demo " data-slide-to="2 "></li>
+                </ul>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active " data-interval="3000 ">
+                        <img src="5.jpg " class="d-block w-100 " alt="Grocery ">
+                    </div>
+                    <div class="carousel-item " data-interval="3000 ">
+                        <img src="8.jpg " class="d-block w-100 " alt="Grocery ">
+                    </div>
+                    <div class="carousel-item " data-interval="3000 ">
+                        <img src="9.jpg " class="d-block w-100 " alt="Grocery ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid-2 ">
+        <div class="col-1 ">
+            <div id="mySidenav " class="sidenav ">
+                <a href="javascript:void(0) " class="closebtn " onclick="closeNav() ">&times;</a>
+                <a href="# ">VEGETABLES</a>
+                <a href="# ">FRUITS</a>
+                <a href="# ">FROZEN ITEMS</a>
+                <a href="# ">BREAD</a>
+                <a href="# ">PROCESSED ITEMS</a>
+            </div>
+            <span style="font-size:30px; cursor:pointer;color: white; " onclick="openNav() ">&#9776; CATEGORY</span>
+        </div>
+    </div>
+    <main>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-3 ">
+                    <div class="widget ">
+                        <h2 class="widget-header ">List</h2>
+                        <div class="ct-cart "></div>
+                    </div>
+                </div>
+                <div class="col-md-9 ">
+                    <div class="row ">
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="carrot.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">CARROT</h2>
+                                    <p class="ct-product-description ">Fresh from Cameron Highland.</p><span class="ct-product-price " style="color: #91C11E; ">$19.99</span>
+                                    <button class="btn btn-primary " href="# " data-toggle="modal " data-target="#myModal " id="edit " style="display: none; ">EDIT</button>
+                                    <button class="btn btn-primary " href="# " id="delete " onclick="deleteProduct() " style="display: none; ">DELETE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="apple.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">APPLE</h2>
+                                    <p class="ct-product-description ">Imported from New Zealand.</p><span class="ct-product-price " style="color: #91C11E; ">$34.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="orange.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">ORANGE</h2>
+                                    <p class="ct-product-description ">Imported from Australia.</p><span class="ct-product-price " style="color: #91C11E; ">$59.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="cauliflower.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">CAULIFLOWER</h2>
+                                    <p class="ct-product-description ">Fresh from the garden.</p><span class="ct-product-price " style="color: #91C11E; ">$9.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="chili.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">CHILLI</h2>
+                                    <p class="ct-product-description ">Hot and spicy.</p><span class="ct-product-price " style="color: #91C11E; ">$3.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <div class="ct-product ">
+                                <div class="image "><img src="cucumber.jpg " alt=" "></div>
+                                <div class="inner "><a href="# " class="btn btn-motive ct-product-button " style="background-color: #659A41; "><i class="fa fa-shopping-cart "></i></a>
+                                    <h2 class="ct-product-title ">CUCUMBER</h2>
+                                    <p class="ct-product-description ">Imported from Thailand.</p><span class="ct-product-price " style="color: #91C11E; ">$13.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery-1.11.3.min.js "></script>
+    <script src="js/shop.min.js "></script>
+    <script>
+        $('body').ctshop({
+            currency: '$',
+            paypal: {
+                currency_code: 'EUR'
+            }
+        });
+    </script>
+    <div style="text-align:center; ">
+        <p<a href="index.html " target="_blank ">
+            </a>
+            </p>
+    </div>
+
+    <div class="footer ">
+        <div class="container ">
+            <div class="row">
+                <div class="footer-col-1 ">
+                    <h2>Our Helpline</h2>
+                    <p>1300-800-600</p>
+                </div>
+                <div class="footer-col-2 ">
+                    <h2>Email</h2>
+                    <p>GreenStore@gmail.com</p>
+                </div>
+                <div class="footer-col-3 ">
+                    <h2>Follow Us</h2>
+                    <a class="icon" style="color: white;" href="https://www.instagram.com/"><i class=" fa fa-instagram "></i></a> &nbsp
+                    <a class="icon " style="color: white; " href="https://twitter.com/ "><i class="fa fa-twitter "></i></a> &nbsp
+                    <a class="icon " style="color: white; " href="https://www.facebook.com/ "><i class="fa fa-facebook "></i></a> &nbsp
+                </div>
+                <div class="footer-col-4 ">
+                    <h2>Find Us At</h2>
+                    <p>Jalan 6/95B, Cheras Utama,<br>56100 Kuala Lumpur,<br>Malaysia </p>
+                </div>
+            </div>
+            <p class="copyright ">Copyright 2021 - GREENSTORE</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</html>
+
+</html>

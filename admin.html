@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+    <title>GREENSTORE-ADMIN</title>
+    <style>
+        body {
+            font-family: 'Architects Daughter', cursive;
+            color: #659A41;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .nav-item:hover {
+            color: #91C11E;
+        }
+        
+        .nav-link:hover {
+            color: #91C11E;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #FFAD00;
+        }
+        
+        p {
+            color: #FFAD00;
+        }
+        
+        .container-fluid-2 .row {
+            width: min-content;
+        }
+        
+        .col-1 {
+            max-width: 100%;
+            padding: 15px;
+            background-color: #94c02e;
+        }
+        
+        .col-2 {
+            max-width: 1500px;
+            padding: 15px;
+        }
+        
+        .col-3 {
+            max-width: 600px;
+            padding: 15px;
+        }
+        
+        .card-body p {
+            color: #91C11E;
+            font-size: 20px;
+        }
+        
+        .mybox {
+            background-color: white;
+        }
+        
+        .carousel-inner img {
+            width: 1600px;
+            height: 600px;
+        }
+        
+        .dropdown-menu {
+            background-color: #FFAD00;
+        }
+        
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #659A41;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #FFAD00;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        .modal-title {
+            color: #659A41;
+        }
+        
+        .row button {
+            background-color: #FFAD00;
+            border-color: black;
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid-1">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <a class="navbar-brand">
+                    <h1 style="color:#659A41;">GREEN
+                        <p2 style="color:#91C11E">STORE</p2>
+                    </h1>
+                </a>
+                <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
+                      <span class="navbar-toggler-icon "></span>
+                    </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item active ">
+                            <a class="nav-link " href="mainpage3.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="">Shopping List</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item " href="LoginRegister.html">Login/Register</a>
+                            </div>
+                        </li>
+                        <button type="button" class="btn btn-primary" onclick="showButton()" style="background-color: #FFAD00;border-color: #FFAD00;margin-left: 680px;">Admin</button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="card-columns" id="cc">
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="carrot.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">CARROT</h3>
+                    <p>Fresh from Cameron Highland.</p>
+                    <strong><span class="price">$19.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="cauliflower.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">CAULIFLOWER</h3>
+                    <p>Fresh from the garden.</p>
+                    <strong><span class="price">$9.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit1" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete1" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="chili.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">CHILLI</h3>
+                    <p>Hot and spicy.</p>
+                    <strong><span class="price">$3.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit2" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete2" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="cucumber.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">CUCUMBER</h3>
+                    <p>Imported from Thailand.</p>
+                    <strong><span class="price">$13.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit3" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete3" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="apple.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">APPLE</h3>
+                    <p>Imported from New Zealand.</p>
+                    <strong><span class="price">$34.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit4" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete4" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="product" class="card" style="width:300px">
+                <img class="card-img-top" src="orange.jpg" alt="Product image" style="width:100%">
+                <div class="card-body">
+                    <h3 class="card-title">ORANGE</h3>
+                    <p>Imported from Austaralia.</p>
+                    <strong><span class="price">$59.99</span></strong>
+                    <div class="row">
+                        <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal" id="edit5" style="display: none;">EDIT</button>
+                        <button class="btn btn-primary" href="#" id="delete5" onclick="deleteProduct()" style="display: none;">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="addCard" class="card" style="width:300px" style="display: none;">
+                <div class="card-body">
+                    <img src="addCard.png" alt="addProduct" data-toggle="modal" data-target="#addProductModal" id="addProduct" style="display: none;"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">EDIT PRODUCT INFO</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <form>
+                                <div class="form-group">
+                                    <label for="product-name">Product name:</label>
+                                    <input type="text" class="form-control" id="product-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-name">Product description:</label>
+                                    <input type="text" class="form-control" id="product-description">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-price">Price:</label>
+                                    <input type="text" class="form-control" id="product-price">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #FFAD00;border-color: #FFAD00;">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="modal fade" id="addProductModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">ADD PRODUCT</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <form>
+                                <div class="form-group">
+                                    <label for="product-name">Product name:</label>
+                                    <input type="text" class="form-control" id="nc-product-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-name">Product description:</label>
+                                    <input type="text" class="form-control" id="nc-product-description">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-price">Price:</label>
+                                    <input type="text" class="form-control" id="nc-product-price">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-image">Product image:</label>
+                                    <input type="file" class="form-control-file" id="nc-product-image">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="createCard()" style="background-color: #FFAD00;border-color: #FFAD00;">Add Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</html>
+
+</html>
