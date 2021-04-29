@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="product.js"></script>
+    <script src="js/jquery-1.11.3.min.js "></script>
+    <script src="js/shop.min.js "></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GREENSTORE-PRODUCT</title>
+</head>
+<body style="background-color: whitesmoke;">
+    <nav class="navbar navbar-expand navbar-light ">
+        <a class="navbar-brand ">
+            <h1 style="color:#659A41; ">GREEN
+                <p2 style="color:#91C11E ">STORE</p2>
+            </h1>
+        </a>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown"  >
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: orange; text-transform: uppercase;" href="mainpage.html">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link active" style="color: rgb(226, 147, 1); text-transform: uppercase;" href="product.html">&nbsp;Product</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " style="color: orange; text-transform: uppercase;" href="">&nbsp;Shopping List</a>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" style="color: orange; text-transform: uppercase;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;Account</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item " href="LoginRegister.html">Login/Register</a>
+                    <button style="float: left;" type="button" class="dropdown-item " data-bs-toggle="modal" data-bs-target="#modal" data-bs-backdrop="static">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </button>
+                </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <section class="container content-section">
+        <h2 class="section-header">FRUITS</h2>
+            <div class="row">
+                <div class="shop-items">
+                    <div class="shop-item col-sm-5">
+                        <span class="shop-item-title">Orange</span>
+                        <img class="shop-item-image" src="orange.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$1.20/each</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                        </div>
+                    </div>
+                    <div class="shop-item col-sm-5">
+                        <span class="shop-item-title">Manggo</span>
+                        <img class="shop-item-image" src="manggo.gif">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$1.50/each</span>
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO LIST</button>
+                        </div>
+                    </div>
+                    <div class="shop-item col-sm-5">
+                        <span class="shop-item-title">Apple</span>
+                        <img class="shop-item-image" src="apple.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$2.10/each</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                        </div>
+                    </div>
+                    <div class="shop-item col-sm-5">
+                        <span class="shop-item-title">Strawberry 500g</span>
+                        <img class="shop-item-image" src="strawberry.gif">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$9.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">COOKING OIL</h2>
+        <div class="shop-items">
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Cooking Oil Saji 5kg</span>
+                <img class="shop-item-image" src="oil.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$26.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Vegetable Cooking Oil 1L</span>
+                <img class="shop-item-image" src="oil1.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$19.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Naturel Blend Cooking Oil 1L</span>
+                <img class="shop-item-image" src="oil2.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$12.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Canola Cooking Oil<br> 5L</span>
+                <img class="shop-item-image" src="oil3.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$23.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">CHILLED & FROZEN</h2>
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Unsalted Butter 199g</span>
+                <img class="shop-item-image" src="butter.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$5.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Chesdale Cheese</span>
+                <img class="shop-item-image" src="cheese.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$18.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Nestle Yogurt 470g</span>
+                <img class="shop-item-image" src="yogurt.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$7.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Magnum Mini Chocolate</span>
+                <img class="shop-item-image" src="mini.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$10.49</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">SEAFOOD</h2>
+        <div class="shop-items">
+            <div class="row">
+            <div class="shop-item">
+                <span class="shop-item-title">Fresh Prawn</span>
+                <img class="shop-item-image" src="prawn.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$23.99/kg</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Fresh Fish</span>
+                <img class="shop-item-image" src="fish.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$39.90/kg</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Fresh Crab</span>
+                <img class="shop-item-image" src="crab.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$28.00/kg</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Fresh Squid</span>
+                <img class="shop-item-image" src="squid.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$30.80/kg</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">CANNED FOOD</h2>
+        <div class="shop-items">
+            <div class="row">
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Corn</span>
+                <img class="shop-item-image" src="corn.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$6.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Fruit Cocktail</span>
+                <img class="shop-item-image" src="fruit.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$7.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Fish Food Can Mockup</span>
+                <img class="shop-item-image" src="tuna.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$7.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Button Mushroom</span>
+                <img class="shop-item-image" src="mush.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$6.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">VEGETABLES</h2>
+        <div class="shop-items">
+            <div class="row">
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Coriander 100g</span>
+                <img class="shop-item-image" src="coriander.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$1.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Cauliflower 500g</span>
+                <img class="shop-item-image" src="cauliflower.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$6.90</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Lemongrass 100g</span>
+                <img class="shop-item-image" src="lemongrass.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$2.10</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Lettuce 100pcs</span>
+                <img class="shop-item-image" src="lettuce.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$1.70</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Fresh Cabbage 1kg</span>
+                <img class="shop-item-image" src="cabbage.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$2.70</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Green Bean 1kg</span>
+                <img class="shop-item-image" src="greenbean.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$10.10</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">RICE</h2>
+        <div class="shop-items">
+            <div class="row">
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Cap Rambutan Rice 10kg</span>
+                <img class="shop-item-image" src="caprambutan.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$25.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Jasmine Rice 10kg</span>
+                <img class="shop-item-image" src="jasmine.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$39.88</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Basmati Rice 5kg</span>
+                <img class="shop-item-image" src="basmathi.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$35.00</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Jasmine Sunwhite Rice 10kg</span>
+                <img class="shop-item-image" src="jasmine1.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$37.88</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">BISCUITS</h2>
+        <div class="shop-items">
+            <div class="row">
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title">Jacaobs Crackers 700g</span>
+                <img class="shop-item-image" src="jacob.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$13.70</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Tiger Biscuit 100g</span>
+                <img class="shop-item-image" src="tiger.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$2.80</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-6">
+                <span class="shop-item-title text-center">Oreo Biscuit Vanilla <br> 9 x 28.5g</span>
+                <img class="shop-item-image" src="oreo.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$5.30</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Munchy's Oat Crunch 416g</span>
+                <img class="shop-item-image" src="oat.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$8.79</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">MILK</h2>
+        <div class="shop-items">
+
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Full Cream Milk <br>6 x 200ml</span>
+                <img class="shop-item-image" src="fullmilk.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$8.94</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Low Fat Milk<br>6 x 200ml</span>
+                <img class="shop-item-image" src="lowmilk.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$8.50</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">Instant Noodle</h2>
+        <div class="shop-items">
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Maggi Hot Cup</span>
+                <img class="shop-item-image" src="maggicup.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$2.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Maggi 6packs</span>
+                <img class="shop-item-image" src="maggipacket.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$5.35</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">SNACKS</h2>
+        <div class="shop-items">
+            <div class="shop-item col-sm-5">
+                <span class="shop-item-title">Mister Potato Chips 75g</span>
+                <img class="shop-item-image" src="mister.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$2.50</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+            <div class="shop-item col-sm-4">
+                <span class="shop-item-title">Cottage Fries 100g</span>
+                <img class="shop-item-image" src="chips.gif">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$3.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO LIST</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="container content-section">
+        <h2 class="section-header">LIST</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase " type="button">SAVE</button>
+    </section>
+    <br>
+    <footer>
+        <div class="row" style="background-color: #659A41; color: whitesmoke;font-size: 15px; ">
+            <div class="col-sm-3" style="font-family: Georgia, 'Times New Roman', Times, serif;margin-left: 18%; padding-top: 3%;">
+                <h2>Our Helpline</h2>
+                <p>1300-800-600</p>
+                <h2>Email</h2>
+                <p>GreenStore@gmail.com</p>
+            </div>
+            <div class="col-sm-3" style="font-family: Georgia, 'Times New Roman', Times, serif; padding-top: 3%;">
+                <h2>&nbsp;&nbsp;&nbsp;Follow Us</h2>
+                <ul>
+                    <a class="icon" style="color: white;" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a> &nbsp
+                    <a class="icon" style="color: white;" href="https://twitter.com/"><i class="fa fa-twitter"></i></a> &nbsp
+                    <a class="icon" style="color: white;" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a> &nbsp
+                </ul>
+            </div>
+            <div class="col-sm-3" style="font-family: Georgia, 'Times New Roman', Times, serif;padding-top: 3%;">
+                <h2>Find Us At</h2>
+                <p>Jalan 6/95B, Cheras Utama,<br>56100 Kuala Lumpur,<br>Malaysia </p>
+            </div> 
+        </div>
+        <p class="text-center">&copy;<i>Copyright 2021</i> - GREENSTORE</p>
+    </footer>
+</body>
+
+</html>
